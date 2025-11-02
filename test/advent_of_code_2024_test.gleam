@@ -1,11 +1,11 @@
-import problems/day_seven
 import gleeunit
-import problems/day_one
-import problems/day_two
-import problems/day_three
-import problems/day_four
 import problems/day_five
+import problems/day_four
+import problems/day_one
+import problems/day_seven
 import problems/day_six
+import problems/day_three
+import problems/day_two
 
 pub fn main() -> Nil {
   gleeunit.main()

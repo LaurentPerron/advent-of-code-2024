@@ -2,9 +2,8 @@ import gleam/dict.{type Dict, get}
 import gleam/list
 import gleam/string
 
-
 pub fn solution() -> Int {
-    let input_string = 
+  let input_string =
     "
     MMMSXXMASM
     MSAMXMSMSA
@@ -17,7 +16,7 @@ pub fn solution() -> Int {
     MAMMMXMMMM
     MXMXAXMASX
     "
-    find_all_xmas(input_string)
+  find_all_xmas(input_string)
 }
 
 pub fn find_all_xmas(input: String) -> Int {
@@ -53,7 +52,7 @@ fn xmas_search(position: #(Int, Int), ws: Dict(#(Int, Int), String)) -> Int {
     #(#(x - 1, y - 1), #(x - 2, y - 2), #(x - 3, y - 3)),
     #(#(x + 1, y - 1), #(x + 2, y - 2), #(x + 3, y - 3)),
     #(#(x - 1, y + 1), #(x - 2, y + 2), #(x - 3, y + 3)),
-    #(#(x + 1, y + 1), #(x + 2, y + 2), #(x + 3, y + 3))
+    #(#(x + 1, y + 1), #(x + 2, y + 2), #(x + 3, y + 3)),
   ]
   search_space
   |> list.fold(0, fn(count, direction) {
